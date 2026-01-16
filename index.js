@@ -6,7 +6,7 @@ require('dotenv').config()
 var app = express();
 
 // Configure multer for memory storage
-var upload = multer({ storage: multer.memoryStorage() });
+const upload = multer({ dest: 'uploads/' });
 
 app.use(cors());
 app.use('/public', express.static(process.cwd() + '/public'));
